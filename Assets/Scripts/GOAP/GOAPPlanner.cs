@@ -35,7 +35,7 @@ public class GOAPPlanner : MonoBehaviour
             () =>
             {
                 int arrowCount = resourceManager.arrowCount;
-                return arrowCount < 5 ? 7 : 2; // Higher priority when arrows are below 5
+                return arrowCount < 10 ? 7 : 2; // Higher priority when arrows are below 10
             },
             () => resourceManager != null &&
                 ((GameObject.FindGameObjectsWithTag("Wood").Length > 0) ||

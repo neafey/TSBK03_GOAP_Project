@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public bool isHit = false; // Tracks if the enemy has been hit
+    public bool isHit = false;
 
     public float speed = 2f; // Movement speed of the enemy
-    private Transform npc; // Reference to the NPC
+    private Transform npc;
+    
 
     void Start()
     {
@@ -28,10 +29,10 @@ public class Enemy : MonoBehaviour
             NPC npcComponent = collision.GetComponent<NPC>();
             if (npcComponent != null)
             {
-                npcComponent.TakeDamage(10, 5); // Example: lose 10 health and 5 hunger
+                npcComponent.TakeDamage(10, 5);
             }
 
-            Destroy(gameObject); // Destroy the enemy
+            Destroy(gameObject);
         }
     }
 
@@ -40,8 +41,7 @@ public class Enemy : MonoBehaviour
         if (!isHit)
         {
             isHit = true;
-            Debug.Log($"{gameObject.name} has been hit!");
-            Destroy(gameObject, 0.5f); // Destroy the enemy after a short delay
+            Destroy(gameObject); 
         }
     }
 

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BehaviorSelection : MonoBehaviour
 {
     public static BehaviorType SelectedBehavior { get; private set; }
 
-    public enum BehaviorType { GOAP, ST }
+    public enum BehaviorType { GOAP, FSM }
 
     public void SelectGOAP()
     {
@@ -14,9 +15,9 @@ public class BehaviorSelection : MonoBehaviour
         LoadGameScene();
     }
 
-    public void SelectST()
+    public void SelectFSM()
     {
-        SelectedBehavior = BehaviorType.ST;
+        SelectedBehavior = BehaviorType.FSM;
         LoadGameScene();
     }
 

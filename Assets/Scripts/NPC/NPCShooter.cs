@@ -4,6 +4,12 @@ public class NPCShooter : MonoBehaviour
 {
     public float shootRange = 5f; // Range to detect enemies
     public ResourceManager resourceManager;
+    private NPC npc;
+
+    private void Start()
+    {
+        npc = GetComponent<NPC>();
+    }
 
     void Update()
     {
@@ -33,8 +39,8 @@ public class NPCShooter : MonoBehaviour
         {
             resourceManager.arrowCount--;
             resourceManager.UpdateResourceText();
+            npc.IncrementEnemiesKilled();
             closestEnemy.GetHit();
-            Debug.Log($"Shot an enemy at distance: {closestDistance}");
         }
     }
 }

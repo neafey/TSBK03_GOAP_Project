@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Simple task
+  m_text: 'FSM
 
 '
   m_isRightToLeft: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 432834171}
         m_TargetAssemblyTypeName: BehaviorSelection, Assembly-CSharp
-        m_MethodName: SelectST
+        m_MethodName: SelectFSM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
